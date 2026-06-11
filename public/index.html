@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Livre - Web Proxy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Barra de Navegação Superior (Estilo Browser) -->
+        <header class="browser-bar">
+            <div class="window-controls">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot maximize"></span>
+            </div>
+            
+            <form id="url-form" class="address-bar-container">
+                <div class="input-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="url-input" placeholder="Digite a URL (ex: google.com) ou pesquise..." autocomplete="off" />
+                </div>
+                <button type="submit" class="go-btn">Ir</button>
+            </form>
+        </header>
+
+        <!-- Área de Conteúdo (Iframe) -->
+        <main class="content-area">
+            <div id="welcome-screen" class="welcome-screen">
+                <div class="hero-content">
+                    <h1>Acesso <span>Livre</span></h1>
+                    <p>Acesse sites bloqueados pelo seu IP com privacidade e velocidade. Digite a URL acima para começar.</p>
+                </div>
+            </div>
+            <iframe id="proxy-frame" src="" frameborder="0" allowfullscreen></iframe>
+            
+            <div id="loader" class="loader-container hidden">
+                <div class="spinner"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
